@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const formData = new FormData(form);
         const serializedData = Object.fromEntries(formData.entries());
+        console.log(serializedData);
         
         fetch('/submit-data', {
             method: 'POST',
