@@ -1,0 +1,72 @@
+:root {
+    --bg-color: #2a2a2a;
+    --text-color: #e0e0e0;
+    --input-bg: #3a3a3a;
+    --input-border: #4a4a4a;
+    --button-bg: #4a4a4a;
+    --button-hover: #5a5a5a;
+    --remove-button-bg: #8b0000;
+    --remove-button-hover: #a00000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#form-container {
+    background-color: var(--input-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 4px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+#remove-inputs {
+    background-color: var(--remove-button-bg);
+}
+
+#remove-inputs:hover {
+    background-color: var(--remove-button-hover);
+}
+
+#status-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
