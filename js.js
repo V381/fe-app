@@ -32,9 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const formData = new FormData(form);
-        const serializedData = Object.fromEntries(formData.entries());
-        console.log(serializedData);
+        const inputs = form.querySelectorAll('input[type="text"]');
+        const serializedData = {};
+        
+        inputs.forEach((input, index) => {
+            const value = input.value.trim();
+            if (value !== '') {
+                serializedData[value] = index + 1;
+            }
+        });
+
+        console.log('Serialized form data:', serializedData);
         
         fetch('/submit-data', {
             method: 'POST',
